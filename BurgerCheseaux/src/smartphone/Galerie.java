@@ -248,7 +248,7 @@ public class Galerie extends JPanel {
 	
 		public void mouseClicked(MouseEvent e1) {
 			// Au clic sur l'image, on change de fenêtre en lui transmettant les paramètres, pour qu'il puisse charger la bonne image
-			Structure.changeImage(4, indice, listeImages);
+			Structure.changeImage(6, indice, listeImages);
 		}
 		
 		public void mouseEntered(MouseEvent e2) {}
@@ -262,7 +262,7 @@ public class Galerie extends JPanel {
 
 	
 	// Méthode pour le redimensionnement des images
-	protected ImageIcon resizeImage(ImageIcon imageIcon, int largeur, int hauteur) {
+	public ImageIcon resizeImage(ImageIcon imageIcon, int largeur, int hauteur) {
 		
 	      Image image = imageIcon.getImage();
 	      Image nouvelleImage = image.getScaledInstance(largeur, hauteur, java.awt.Image.SCALE_SMOOTH);

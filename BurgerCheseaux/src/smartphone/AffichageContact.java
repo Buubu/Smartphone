@@ -305,7 +305,7 @@ public class AffichageContact extends JPanel {
 	
 	
 	// Méthode d'extraction des parties, y compris tests
-	private static String[] extraireParties(String infos) {
+	public static String[] extraireParties(String infos) {
 		String partieExtraite;
 		String[] infosModifiees = new String[2];
 		

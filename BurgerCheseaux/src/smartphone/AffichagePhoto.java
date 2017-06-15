@@ -219,7 +219,7 @@ public class AffichagePhoto extends JPanel {
 			// Sinon, il montre l'image suivante de la galerie
 			else {
 				index++;
-				Structure.changeImage(4, index, listeImages);
+				Structure.changeImage(6, index, listeImages);
 			}
 		}
 	}
@@ -235,7 +235,7 @@ public class AffichagePhoto extends JPanel {
 			// Sinon, il montre l'image précédente de la galerie
 			else {
 				index--;
-				Structure.changeImage(4, index, listeImages);
+				Structure.changeImage(6, index, listeImages);
 			}
 		}
 	}

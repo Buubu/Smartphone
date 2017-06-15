@@ -163,7 +163,7 @@ public class Structure extends JFrame {
 	// Méthode d'affichage du Panel "AffichagePhoto"
 	public static void changeImage(int a, int indice, File[] listImage){
 		JPanel photo = new AffichagePhoto(indice, listImage);
-		ecran.add(photo, liste[4]);
+		ecran.add(photo, liste[6]);
 		collectionEcrans.show(ecran, liste[a]);
 	}
 	
