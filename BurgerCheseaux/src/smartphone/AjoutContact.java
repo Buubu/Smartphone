@@ -53,6 +53,8 @@ public class AjoutContact extends JPanel {
 	private String pathContacts = "stockage/ListeContacts";
 	private File folder = new File(pathContacts);
 	
+	private Galerie galerie = new Galerie();
+	
 		
 	public AjoutContact() {
 		
@@ -271,11 +273,7 @@ public class AjoutContact extends JPanel {
 			
 			if(option == JOptionPane.OK_OPTION) {
 				// Remise à "zéro" du contenu des JTextField
-				prenom.setText("Prénom");
-				nom.setText("Nom");
-				telephone.setText("N° de téléphone");
-				mail.setText("Email");
-				naissance.setText("Date de naissance");
+				resetTextField();
 				
 				Structure.changePanel(1);
 			}
@@ -427,6 +425,7 @@ public class AjoutContact extends JPanel {
 		
 
 		public void actionPerformed(ActionEvent e5) {
+			
 			// Définition de la taille de la grille, sur notre grille, rapport de 2 (pour 6 éléments, 3 lignes - pour 8 éléments, 4 lignes, etc...)
 			// Calcul du nombre de lignes
 			calcul = (folder.list().length)/2.0;
@@ -444,7 +443,7 @@ public class AjoutContact extends JPanel {
 			}
 			
 			// Utilisation de la méthode qui va chercher le dossier d'images
-			File[] listeImages = galerie.getdossierImages();
+			File[] listeImages = folder.listFiles();
 			
 			// Définition du format du JPanel
 		    JPanel ecran = new JPanel();
@@ -477,7 +476,7 @@ public class AjoutContact extends JPanel {
 			scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 			scroll.getVerticalScrollBar().setUnitIncrement(16);
 		    
-		    JOptionPane.showMessageDialog(null, scroll, "Galerie",JOptionPane.QUESTION_MESSAGE);
+		    JOptionPane.showMessageDialog(null, scroll, "Galerie", JOptionPane.QUESTION_MESSAGE);
 		}			
 	}
 	
