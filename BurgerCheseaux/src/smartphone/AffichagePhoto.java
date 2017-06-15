@@ -247,7 +247,7 @@ public class AffichagePhoto extends JPanel {
 			File fichier = new File(listeImages[index].getAbsolutePath());
 			
 			JOptionPane confirmation = new JOptionPane();
-			int option = JOptionPane.showOptionDialog(null, "Cette action est irréversible, êtes-vous sûr de vouloir supprimer définitivement cette image ?",
+			int option = JOptionPane.showOptionDialog(null, "Êtes-vous sûr de vouloir supprimer définitivement cette image ?",
 					"Supprimer l'image", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, new String[] {"Supprimer", "Annuler"}, "Annuler");
 			
 			if(option == JOptionPane.OK_OPTION) {
